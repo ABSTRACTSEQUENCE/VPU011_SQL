@@ -1,0 +1,9 @@
+--DISCIPLINES
+USE SQLAcademy_VPU_011
+GO
+CREATE TABLE disciplines(
+disc_id	INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+disc_name NVARCHAR(20),
+teacher	NVARCHAR(20),
+spec	INT CONSTRAINT FK_specs FOREIGN KEY REFERENCES specs(spec_id)
+)
